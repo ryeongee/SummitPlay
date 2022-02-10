@@ -127,13 +127,13 @@ const NavigationHeader = () => {
 const HeaderBox = () => {
   return (
     <Box paddingX={["2","4","8","16"]} paddingY={["2","4","6","12"]} bgColor="black" borderRadius="2xl">
-      <Text fontSize={["2px","xs","sm","3xl"]} color="white" fontWeight="bold" mb="5">
+      <Text fontSize={["xs","xs","sm","3xl"]} color="white" fontWeight="bold" mb="5">
         2월 말 COMING SOON
       </Text>
-      <Text fontSize={["1px","xs","sm","lg"]} color="white">
+      <Text fontSize={["xs","xs","sm","lg"]} color="white">
         전세계 최초의 미발매 음원
       </Text>
-      <Text maxW={['110px','140px','150px','none']} fontSize={["1px","xs","sm","lg"]} color="white">
+      <Text maxW={['110px','140px','150px','none']} fontSize={["xs","xs","sm","lg"]} color="white">
         저작권 독점 경매 및 음원 발매 중개 플랫폼
       </Text>
       <HStack mt="4" spacing="5">
@@ -147,7 +147,7 @@ const HeaderBox = () => {
 const MainTitle = () => {
   return (
     <VStack align="flex-end">
-      <Text fontSize={["1px","sm","sm","4xl"]} color="white" fontWeight="bold">
+      <Text fontSize={["sm","sm","sm","4xl"]} color="white" fontWeight="bold">
         꿈을 이루어 드리는 최고의 놀이터
       </Text>
       <Flex display={['none','none','none','flex']}>
