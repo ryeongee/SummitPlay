@@ -2,7 +2,7 @@ import { Box, Flex, Image, Text, VStack } from "@chakra-ui/react";
 import { useState, } from 'react'
 import { findOrder, changeProfile } from "./Function";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Scrollbar,A11y, Pagination } from "swiper";
+import { Scrollbar,A11y, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
