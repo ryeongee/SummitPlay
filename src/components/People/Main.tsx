@@ -56,7 +56,7 @@ export const AboutUSMainSection = () => {
           </Box>
         </Flex>
         {/* <RightSection/> */}
-        <Flex  w={['none','none','500px','800px']}  flexDirection="column" justify="center">
+        <Flex  w={['none','none','400px','800px']}  flexDirection="column" justify="center">
           {/* <Information /> */}
           <Flex display={display[0]} flexDirection="column" justifyContent="space-between" h={585} paddingTop={30} >            
             <VStack w="100%" spacing="-1.33px" align="flex-start" h={168}>
