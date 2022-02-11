@@ -202,7 +202,7 @@ const SectionFive = () => {
         srcSet="/image/hero-6@2x.png 2x,
            /image/hero-6@3x.png 3x"
       />
-      <Box w="500px" flexDirection="column" mr={['0','0','0',"32"]}>
+      <Box w={["300px","400px","500px","500px"]} flexDirection="column" mr={['0','0','0',"32"]}>
         <Text fontSize="3xl" fontWeight="bold" textAlign={['center','center','center',"right"]}>
           취미로 가수가 되는 플랫폼
           <br />
