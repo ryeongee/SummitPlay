@@ -27,16 +27,18 @@ const Wrapper: FC = ({ children }) => {
 
 const SectionOne = () => {
   return (
-    <HStack w="100%" spacing={0} align={["center","center","center","flex-start"]} flexDirection={["column","column","column","row"]}>
+    <Flex w="100%" overflow="hidden" spacing={0} justify="center" align={["center","center","center","center"]} flexDirection={["column","column","column","row"]}>
       <Image
         display={["none","none","none",'flex']}
         src="/image/hero-2.png"
+        w="795px"
+        h="748px"
+        objectFit="fill"
+        transform="translateX(-100px)"       
         srcSet="/image/hero-2@2x.png 2x,
              /image/hero-2@3x.png 3x"
-        ml={["0","5","10","16"]}
-        mr={["0","5","10","16"]}
       />
-      <Flex flexDirection="column">
+      <Flex flexDirection="column" w="700px" minW="700px" >
         <Text fontSize={["3xl","3xl","4xl","4xl"]} fontWeight="bold" textAlign="center" pt={["20","20","20","44"]}>
           미발매 음원 듣고,
           <br />
@@ -55,14 +57,14 @@ const SectionOne = () => {
           <Chart width={300} />
         </Flex>
       </Flex>
-    </HStack>
+    </Flex>
   );
 };
 
 const SectionTwo = () => {
   return (
-    <HStack w="100%" spacing={0} justify="center" flexDirection={["column","column","column","row"]} mt={["0","0","0","-24"]}>
-      <VStack spacing={0} align={["center","center","center","flex-start"]} mt="10">
+    <HStack w="100%" spacing={0} justify="center" flexDirection={["column","column","column","row"]}>
+      <VStack spacing={0} align={["center","center","center","flex-start"]}>
         <Text fontSize="3xl" fontWeight="bold">
           누구나 경매를 통해
         </Text>
@@ -86,10 +88,11 @@ const SectionTwo = () => {
       </VStack>
       <Image
         display={['none','none','none','flex']}
-        paddingLeft="16"
+        paddingTop="50"
+        paddingLeft="100px"
         objectFit="cover"
-        w="288px"
-        h="300px"
+        w="324px"
+        h="350px"
         objectPosition="0 0"
         src="/image/hero-a.png"
         srcSet="/image/hero-a@2x.png 2x,
@@ -108,16 +111,14 @@ const SectionThree = () => {
       spacing={0}
       justify="center"
       align="center"
-      paddingTop="14"
     >
       <Image
         src="/image/hero-4.png"
         srcSet="/image/hero-4@2x.png 2x,
              /image/hero-4@3x.png 3x"
         objectFit="contain"
-        mr="32"
       />
-      <VStack spacing={0} align={["center","center","center","flex-start"]}>
+      <VStack w="300px" spacing={0} align={["center","center","center","center"]}>
         <Text fontSize="3xl" fontWeight="bold" textAlign={['center','center','center','right']}>
           음원발매를 위한
           <br />
@@ -146,45 +147,50 @@ const SectionThree = () => {
 
 const SectionFour = () => {
   return (
-    <Flex w="100%" align="center" mt="16">
-      <Box
-        display="flex"
-        flexDirection="row"
-        justifyContent={["center","center","center","flex-end"]}
-        alignItems="center"
-        borderLeftRadius="full"
-        bgColor="#707071"
-        ml={['0','0','0',"32"]}
-        h="500"
-        w="100%"
-      >
-        <Flex flexDirection="column" align={['center','center','center',"left"]} mr={['0','0','0',"32"]}>
-          <Text fontSize="3xl" fontWeight="bold" color="white">
-            누구나 쉽고 저렴하게!
-          </Text>
-          <Text fontSize="4xl" fontWeight="bold" color="white">
-            음원{" "}
-            <Text as="span" fontSize="4xl" fontWeight="bold" color="#ff595a">
-              발매
+    <Flex w="100%" h="709px" overflowX="hidden"  justifyContent={["center","center","center","flex-end"]}>
+      <Flex w="100%" maxW="1700px" align="center" >
+        <Box
+          display="flex"
+          flexDirection="row"
+          alignItems="center"
+          borderLeftRadius="full"
+          bgColor="#707071"
+          ml={[0,0,0,10,10]}
+          h="500"
+          w="1660px"
+        >
+          <Flex w={["100%","100%","100%","1300px","1300px"]} flexDirection="column" align={['center','center','center',"left"]} mr={['0','0','0',"32"]}>
+            <Text fontSize="3xl" fontWeight="bold" color="white" textAlign="left">
+              누구나 쉽고 저렴하게!
             </Text>
-          </Text>
-          <Text fontSize="lg" color="white" paddingTop="5" textAlign="left">
-            음원 발매는 복잡하고 비싸다는 편견, 이제는 NO!
-            <br />
-            써밋플레이에서는 쉽고 간단하게 저렴한 가격으로
-            <br />
-            음원을 발매할 수 있어요. 기회를 놓치지 마세요!
-          </Text>
-        </Flex>
-        <Image
-          display={['none','none','none','flex']}
-          src="/image/hero-5.png"
-          srcSet="/image/hero-5@2x.png 2x,
-             /image/hero-5@3x.png 3x"
-          mr="44"
-        />
-      </Box>
+            <Text fontSize="4xl" fontWeight="bold" color="white" textAlign="left" >
+              음원{" "}
+              <Text as="span" fontSize="4xl" fontWeight="bold" color="#ff595a">
+                발매
+              </Text>
+            </Text>
+            <Text fontSize="lg" color="white" paddingTop="5" textAlign="left">
+              음원 발매는 복잡하고 비싸다는 편견, 이제는 NO!
+              <br />
+              써밋플레이에서는 쉽고 간단하게 저렴한 가격으로
+              <br />
+              음원을 발매할 수 있어요. 기회를 놓치지 마세요!
+            </Text>
+          </Flex>
+          <Image
+            display={['none','none','none','flex']}
+            // align="flex-end"
+            src="/image/hero-5.png"
+            srcSet="/image/hero-5@2x.png 2x,
+              /image/hero-5@3x.png 3x"
+            w={[0,0,0,"710px","710px"]}
+            // alignContent="flex-end"
+            transform="translateX(-100px)"
+          />
+        </Box>
+      </Flex>
     </Flex>
+
   );
 };
 
@@ -195,9 +201,8 @@ const SectionFive = () => {
         src="/image/hero-6.png"
         srcSet="/image/hero-6@2x.png 2x,
            /image/hero-6@3x.png 3x"
-        mr={['0','0','0',"44"]}
       />
-      <Flex flexDirection="column" mr={['0','0','0',"32"]}>
+      <Box w="500px" flexDirection="column" mr={['0','0','0',"32"]}>
         <Text fontSize="3xl" fontWeight="bold" textAlign={['center','center','center',"right"]}>
           취미로 가수가 되는 플랫폼
           <br />
@@ -215,7 +220,7 @@ const SectionFive = () => {
           <br />
           덤으로 수익도 함께 챙겨가세요!
         </Text>
-      </Flex>
+      </Box>
     </Flex>
   );
 };
@@ -225,7 +230,7 @@ const SectionSix = () => {
     <>
       <Flex display={['none','none','none','flex']}>
         <BGImage w="100%" h="560px">
-          <Box paddingX={["0","0","0","480px"]} marginY={["50px","50px","50px","150px"]}>
+          <Box w="900px" margin="0 auto" marginY={["50px","50px","50px","150px"]}>
             <Text textAlign={['center','center','center',"left"]} fontSize="3xl" fontWeight="bold">
               일반인도 가수!
             </Text>
@@ -277,37 +282,43 @@ const SectionSeven = () => {
       <Flex 
       flexDirection={['column','column','column',"row"]} 
       align="center" 
-      justify="center" 
-      mt={["0","0","12","12"]}>
+      justify="center"
+      marginY="80px"
+      >
         <Image
+          marginLeft={["0","0","0","100px","100px"]}
+          h="400px"
           src="/image/hero-8.png"
           srcSet="/image/hero-8@2x.png 2x,
              /image/hero-8@3x.png 3x"
         />
-        <Flex flexDirection="column" align={['center','center','center',"left"]} mr={["0","0","0","32"]} ml={["0","0","0","52"]}>
+        <Flex flexDirection="column" align={['center','center','center',"left"]} mr={["0","0","0","32"]} ml={["0","0","0","30","52"]}>
           <Text fontSize="4xl" fontWeight="bold">
             2월 말 오픈예정
           </Text>
           <Text fontSize="2xl" paddingTop="4" fontWeight="bold">
             '써밋플레이 APP' 다운로드 해 보세요!
           </Text>
-          <HStack marginY={5}>
+          <Flex marginY={5} >
             <Image
-              display={['none','none','none','flex']}
+              display={['none','none','none','flex','flex']}
               src="/image/ic-3.png"
               srcSet="/image/ic-3@2x.png 2x,
              /image/ic-3@3x.png 3x"
+              w={[0,0,0,"200px","auto"]}
             />
-            <Image display={['image','image','image','none']} width="150px" src="/image/ic-3.png"/>
+            <Image display={['image','image','image','none','none']} width="150px" src="/image/ic-3.png"/>
             <Image
-              display={['none','none','none','flex']}
+              display={['none','none','none','flex','flex']}
               src="/image/ic-4.png"
               srcSet="/image/ic-4@2x.png 2x,
              /image/ic-4@3x.png 3x"
+              w={[0,0,0,"200px","auto"]}
+              marginLeft={[5,5,5,10]}
             />
-            <Image display={['image','image','image','none']} width="150px" src="/image/ic-4.png"/>
-          </HStack>
-          <Text fontSize={["sm","xl","xl","xl"]} paddingTop="4" fontWeight="medium">
+            <Image display={['image','image','image','none','none']} width="150px" src="/image/ic-4.png"/>
+          </Flex>
+          <Text alignItems="center" textAlign={["center","center","center","left","left"]} fontSize={["sm","xl","xl","xl"]} paddingTop="4" fontWeight="medium">
             Enjoy with Summit Play,
             <br /> the best playground that makes your dreams come true
           </Text>

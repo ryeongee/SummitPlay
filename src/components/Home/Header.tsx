@@ -18,7 +18,7 @@ export const Header = () => {
           width="100%"
           position="relative"
           // marginX="40"
-          paddingX="40"
+          paddingX={["0","0","0","0","0","40"]}
           justify="space-between"
           paddingTop="40"
           paddingBottom="20"
@@ -126,7 +126,7 @@ const NavigationHeader = () => {
 
 const HeaderBox = () => {
   return (
-    <Box paddingX={["2","4","8","16"]} paddingY={["2","4","6","12"]} bgColor="black" borderRadius="2xl">
+    <Box paddingX={["2","4","4","8","16"]} paddingY={["2","4","4","6","12"]} bgColor="black" borderRadius="2xl">
       <Text fontSize={["9px","xs","sm","3xl"]} color="white" fontWeight="bold" mb="5">
         2월 말 COMING SOON
       </Text>
@@ -147,16 +147,16 @@ const HeaderBox = () => {
 const MainTitle = () => {
   return (
     <VStack align="flex-end">
-      <Text fontSize={["10px","sm","sm","4xl"]} color="white" fontWeight="bold">
+      <Text fontSize={["10px","sm","sm","2xl","4xl"]} color="white" fontWeight="bold">
         꿈을 이루어 드리는 최고의 놀이터
       </Text>
-      <Flex display={['none','none','none','flex']}>
+      <Flex display={['none','none','none','none','flex']}>
         <Title/>
       </Flex>
-      <Flex display={['none','none','flex','none']}>
-        <Title width="150px"/>
+      <Flex display={['none','none','flex','flex','none']}>
+        <Title width="150px" />
       </Flex>
-      <Flex display={['flex','flex','none','none']}>
+      <Flex display={['flex','flex','none','none','none']}>
         <Title width="100px"/>
       </Flex>
     </VStack>

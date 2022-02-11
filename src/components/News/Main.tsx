@@ -15,7 +15,7 @@ const TextSection = () =>{
         <>
             <Flex width={["300px","450px","585px","auto"]} margin="0 auto">
                 <Text paddingBottom={50} fontSize={["2xl","4xl","5xl","5xl"]} textAlign="center" fontWeight="bold" background="none" marginTop={100}>
-                    <Text color="#ff3e46">써밋플레이</Text>
+                    <Text as="span" color="#ff3e46">써밋플레이</Text>
                     의 다양한 뉴스를 만나보실 수 있습니다.
                 </Text>
             </Flex>
@@ -125,34 +125,3 @@ const SectionThree = () => {
         </>
     );
 };
-
-// const SectionFour = () => {
-//     return (
-//         <>
-//             <Box w={400} >
-//                 <Link href="https://www.chosun.com/economy/industry-company/2022/02/06/RQARTCOGPNBBXCMAXLB5P3XLUE/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news" isExternal>
-//                     <Flex flexDirection="column" w={300} margin="0 auto">
-//                         <Image src="/image/person1.jpg" alt="No-img" margin="0 auto" w={300}></Image>
-//                         <Flex marginTop={1} justify="space-between">
-//                             <Text as="span" fontWeight="bold">조선일보</Text>
-//                             <Text>2022.02.07</Text>
-//                         </Flex>
-//                         <Text marginTop={3} fontSize="2xl" fontWeight="bold">
-//                             음원시장 판도 바꾸는 사람들… 
-//                             <br/>임영웅 대신 전인권 노래 산 이유
-//                         </Text>
-//                         <Text marginTop={5} marginBottom={5} whiteSpace="pre-wrap">
-//                             ◇음원 누구나 사고파는 플랫폼 나오나
-//                             <br/>작년 9월 설립된 써밋플레이는 정식
-//                             발매되지 않은 음원IP를 사고팔 수 
-//                             있는 플랫폼을 준비하고 있다. 
-//                             음원 판매업체에 등록되지 않은 음원
-//                             저작권도 시장 가치가 있다고 본 
-//                             것이다.
-//                         </Text> 
-//                     </Flex>  
-//                 </Link>
-//             </Box>
-//         </>
-//     );
-// };
