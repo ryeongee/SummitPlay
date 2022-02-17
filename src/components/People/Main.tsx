@@ -9,11 +9,11 @@ import "swiper/css/pagination";
 
 export const AboutUSMainSection = () => {
   const addr: string = "/image/";
-  const [people, setPeople] = useState([ "person0", "person1", "person2", "person3", "person4", "person5"])
+  const [people, setPeople] = useState([ "person0", "person1", "person2", "person3", "person4", "person5", "person6"])
   const [who, setWho] = useState("person0");
   const [imgAdress, changeImgAdress] = useState("/image/person0.jpg");
-  const [display, setDisplay] = useState(["flex","none","none","none","none","none"]);
-  const [mobDisplay, setMobDisplay] = useState(["flex","none","none","none","none","none"]);
+  const [display, setDisplay] = useState(["flex","none","none","none","none","none","none"]);
+  const [mobDisplay, setMobDisplay] = useState(["flex","none","none","none","none","none","none"]);
   function MainImgClick(){
     changeImgAdress(addr+who+".jpg");
   };
@@ -109,6 +109,29 @@ export const AboutUSMainSection = () => {
           <Flex display={display[2]} flexDirection="column" justifyContent="space-between" h={585} paddingTop={30} >
             <VStack spacing="-1.33px" align="flex-start" h={168}>
               <Text fontSize="3xl" fontWeight="bold">
+                누구나 자기 노래를 갖는 세상 
+                <br/>음악시장은 써밋플레이로 완전히 바뀔겁니다. 
+              </Text>
+            </VStack>
+            <VStack align="flex-start" h={228} marginBottom={100}>
+              <Text as="span" fontSize="3xl" fontWeight="bold">
+                김 철
+                <Text fontSize='lg' fontWeight="bold">
+                  CMO
+                </Text>
+              </Text>
+              <Text lineHeight="2" fontWeight="bold"> 
+                <br/>BBDO Korea 제작위원
+                <br/>서울광고기획 총괄 부사장
+                <br/>코마코 제작본부장
+                <br/>대홍기획,tbwa korea CD
+                <br/>성균관대학교 중어중문학 학사
+              </Text>
+            </VStack>
+          </Flex>
+          <Flex display={display[3]} flexDirection="column" justifyContent="space-between" h={585} paddingTop={30} >
+            <VStack spacing="-1.33px" align="flex-start" h={168}>
+              <Text fontSize="3xl" fontWeight="bold">
                 기술과 예술이 만나는 그 접점에 써밋플레이가 되도록 하겠습니다.
               </Text>
             </VStack>
@@ -127,7 +150,7 @@ export const AboutUSMainSection = () => {
               </Text>
             </VStack>
           </Flex> 
-          <Flex display={display[3]} flexDirection="column" justifyContent="space-between" h={585} paddingTop={30} >
+          <Flex display={display[4]} flexDirection="column" justifyContent="space-between" h={585} paddingTop={30} >
             <VStack spacing="-1.33px" align="flex-start" h={168}>
               <Text fontSize="3xl" fontWeight="bold">
                 저희 써밋플레이로 꿈과 열정을 자유롭게 펼치고 전세계가 음악으로 소통할 수 있는 서비스를 제공하고 싶습니다.
@@ -149,7 +172,7 @@ export const AboutUSMainSection = () => {
               </Text>
             </VStack>
           </Flex> 
-          <Flex display={display[4]} flexDirection="column" justifyContent="space-between" h={585} paddingTop={30} >
+          <Flex display={display[5]} flexDirection="column" justifyContent="space-between" h={585} paddingTop={30} >
             <VStack spacing="-1.33px" align="flex-start" h={168}>
               <Text fontSize="3xl" fontWeight="bold">
                 써밋플레이는 기술과 음악이만나는 조심스럽고 아름다운 곳입니다, 
@@ -169,7 +192,7 @@ export const AboutUSMainSection = () => {
               </Text>
             </VStack>
           </Flex>
-          <Flex display={display[5]} flexDirection="column" justifyContent="space-between" h={585} paddingTop={30} >
+          <Flex display={display[6]} flexDirection="column" justifyContent="space-between" h={585} paddingTop={30} >
             <VStack spacing="-1.33px" align="flex-start" h={168}>
               <Text fontSize="3xl" fontWeight="bold">
                 써밋플레이의 서비스가 많은 음악인들에게 기회가 되었으면 하는 바람입니다. 
@@ -189,6 +212,7 @@ export const AboutUSMainSection = () => {
               </Text>
             </VStack>
           </Flex>
+
           {/* right bottom  */}
           <Flex display={['none', 'none', 'flex', 'flex']}  w={["none","none","100%","800"]} h={200} flexDirection="row" justifyContent="space-between">
             <Box 
@@ -246,6 +270,17 @@ export const AboutUSMainSection = () => {
               SubImgClick(people[5]);
             }}
             />
+            <Box 
+            as="button" 
+            w={150} 
+            backgroundImage={"/image/"+people[6]+".jpg"}
+            backgroundPosition="center" 
+            backgroundSize="cover"
+            onClick={function (e:any){
+              e.preventDefault();
+              SubImgClick(people[6]);
+            }}
+            />
           </Flex>
         </Flex>
       </Flex>
@@ -258,12 +293,11 @@ export const AboutUSMainSection = () => {
       slidesPerView={1}
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={function (e:any) {
         SetMobProfile(e.activeIndex);}}
       >
         <SwiperSlide>            
-          <Image w={["592px","100%","none","none"]} h={["480px","480px","none","none"]} objectFit="cover" src="/image/person0.jpg" position="relative" alt="no-img"/>
+          <Image w="100%" h={['500px','700px','none','none']} objectFit="cover" src="/image/person0.jpg" position="relative" alt="no-img"/>
           <VStack w="100%" position="absolute" top={["70%","70%","0","0"]} spacing="-1.33px" h={168}>
             <Text w="100%" fontSize={["xs","md","none","none"]} textAlign="center" fontWeight="bold" color="white">
               음악하는 학생들에게 꿈을 포기하지 않는
@@ -273,7 +307,7 @@ export const AboutUSMainSection = () => {
           </VStack>
         </SwiperSlide>
         <SwiperSlide>            
-          <Image w={["592px","100%","none","none"]} h={["480px","480px","none","none"]} objectFit="cover"src="/image/person1.jpg" position="relative" alt="no-img"/>
+          <Image w="100%" h={['500px','700px','none','none']} objectFit="cover"src="/image/person1.jpg" position="relative" alt="no-img"/>
           <VStack w="100%" position="absolute" top={["70%","70%","0","0"]} spacing="-1.33px" h={168}>
             <Text w="100%" fontSize={["xs","md","none","none"]} textAlign="center" fontWeight="bold" color="white">
               디지털로 이어진 음원 커뮤니티 플랫폼, 
@@ -282,7 +316,16 @@ export const AboutUSMainSection = () => {
           </VStack>
         </SwiperSlide>
         <SwiperSlide>            
-          <Image w={["592px","100%","none","none"]} h={["480px","480px","none","none"]} objectFit="cover" src="/image/person2.jpg" position="relative" alt="no-img"/>
+          <Image w="100%" h={['500px','700px','none','none']} objectFit="cover" src="/image/person2.jpg" position="relative" alt="no-img"/>
+          <VStack w="100%" position="absolute" top={["70%","70%","0","0"]} spacing="-1.33px" h={168}>
+            <Text w="100%" fontSize={["xs","md","none","none"]} textAlign="center" fontWeight="bold" color="white">
+              누구나 자기 노래를 갖는 세상
+              <br/>음악시장은 써밋플레이로 완전히 바뀔겁니다.  
+            </Text>
+          </VStack>
+        </SwiperSlide>
+        <SwiperSlide>            
+          <Image w="100%" h={['500px','700px','none','none']} objectFit="cover" src="/image/person3.jpg" position="relative" alt="no-img"/>
           <VStack w="100%" position="absolute" top={["70%","70%","0","0"]} spacing="-1.33px" h={168}>
             <Text w="100%" fontSize={["xs","md","none","none"]} textAlign="center" fontWeight="bold" color="white">
               기술과 예술이 만나는 그 접점에 써밋플레이가 되도록 하겠습니다.     
@@ -290,7 +333,7 @@ export const AboutUSMainSection = () => {
           </VStack>
         </SwiperSlide>
         <SwiperSlide>            
-          <Image w={["592px","100%","none","none"]} h={["480px","480px","none","none"]} objectFit="cover" src="/image/person3.jpg" position="relative" alt="no-img"/>
+          <Image w="100%" h={['500px','700px','none','none']} objectFit="cover" src="/image/person4.jpg" position="relative" alt="no-img"/>
           <VStack w="100%" position="absolute" top={["70%","70%","0","0"]} spacing="-1.33px" h={168}>
             <Text w="100%" fontSize={["xs","md","none","none"]} textAlign="center" fontWeight="bold" color="white">
               저희 써밋플레이로 꿈과 열정을 자유롭게 펼치고 
@@ -299,7 +342,7 @@ export const AboutUSMainSection = () => {
           </VStack>
         </SwiperSlide>
         <SwiperSlide>            
-          <Image w={["592px","100%","none","none"]} h={["480px","480px","none","none"]} objectFit="cover" src="/image/person4.jpg" position="relative" alt="no-img"/>
+          <Image w="100%" h={['500px','700px','none','none']} objectFit="cover" src="/image/person5.jpg" position="relative" alt="no-img"/>
           <VStack w="100%" position="absolute" top={["70%","70%","0","0"]} spacing="-1.33px" h={168}>
             <Text w="100%" fontSize={["xs","md","none","none"]} textAlign="center" fontWeight="bold" color="white">
               써밋플레이는 기술과 음악이만나는 조심스럽고 아름다운 곳입니다, 
@@ -309,7 +352,7 @@ export const AboutUSMainSection = () => {
           </VStack>
         </SwiperSlide>
         <SwiperSlide>            
-          <Image w={["592px","100%","none","none"]} h={["480px","480px","none","none"]} objectFit="cover" src="/image/person5.jpg" position="relative" alt="no-img"/>
+          <Image w="100%" h={['500px','700px','none','none']} objectFit="cover" src="/image/person6.jpg" position="relative" alt="no-img"/>
           <VStack w="100%" position="absolute" top={["70%","70%","0","0"]} spacing="-1.33px" h={168}>
             <Text w="100%" fontSize={["xs","md","none","none"]} textAlign="center" fontWeight="bold" color="white">
               써밋플레이의 서비스가 많은 음악인들에게 기회가 되었으면 하는 바람입니다. 
@@ -317,6 +360,7 @@ export const AboutUSMainSection = () => {
             </Text>
           </VStack>
         </SwiperSlide>
+
       </Swiper>
       </div>
       </Box>
@@ -360,6 +404,21 @@ export const AboutUSMainSection = () => {
       </VStack>
       <VStack display={mobDisplay[2]} align="center" h={228} textAlign="center">
         <Text fontSize="xl" fontWeight="bold" marginTop={5} marginBottom={1}>
+          김 철
+          <Text fontSize='sm' fontWeight="bold">
+            CMO
+          </Text>
+        </Text>
+        <Text fontSize='sm' lineHeight="2" >
+          <br/>BBDO Korea 제작위원 
+          <br/>서울광고기획 총괄 부사장
+          <br/>코마코 제작본부장
+          <br/>대홍기획,tbwa korea CD
+          <br/>성균관대학교 중어중문학 학사
+        </Text>
+      </VStack>
+      <VStack display={mobDisplay[3]} align="center" h={228} textAlign="center">
+        <Text fontSize="xl" fontWeight="bold" marginTop={5} marginBottom={1}>
           김 중 학
           <Text fontSize='sm' fontWeight="bold">
             Lead Server Developer
@@ -372,7 +431,7 @@ export const AboutUSMainSection = () => {
             <br/>영남이공대학교 졸업
         </Text>
       </VStack>
-      <VStack display={mobDisplay[3]} align="center" h={228} textAlign="center">
+      <VStack display={mobDisplay[4]} align="center" h={228} textAlign="center">
         <Text fontSize="xl" fontWeight="bold" marginTop={5} marginBottom={1}>
           엄 홍 인
           <Text fontSize='sm' fontWeight="bold">
@@ -387,7 +446,7 @@ export const AboutUSMainSection = () => {
             <br/>대구 경북대학교 졸업
         </Text>
       </VStack>
-      <VStack display={mobDisplay[4]} align="center" h={228} textAlign="center">
+      <VStack display={mobDisplay[5]} align="center" h={228} textAlign="center">
         <Text fontSize="xl" fontWeight="bold" marginTop={5} marginBottom={1}>
           윤 상 준
           <Text fontSize='sm' fontWeight="bold">
@@ -399,7 +458,7 @@ export const AboutUSMainSection = () => {
           <br/>포산고등학교 졸업
         </Text>
       </VStack>
-      <VStack display={mobDisplay[5]} align="center" h={228} textAlign="center">
+      <VStack display={mobDisplay[6]} align="center" h={228} textAlign="center">
         <Text fontSize="xl" fontWeight="bold" marginTop={5} marginBottom={1}>
           권 지 우
           <Text fontSize='sm' fontWeight="bold">
@@ -411,6 +470,7 @@ export const AboutUSMainSection = () => {
           <br/>이화여자대학교 교육대학원 교육학과 음악교육전공
         </Text>
       </VStack>
+
     </Flex>
       <Partners/>
     </>

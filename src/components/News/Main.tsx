@@ -101,7 +101,7 @@ const SectionThree = () => {
             <Box w={400} >
                 <Link href="https://www.chosun.com/economy/industry-company/2022/02/06/RQARTCOGPNBBXCMAXLB5P3XLUE/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news" isExternal>
                     <Flex flexDirection="column" w={300} margin="0 auto">
-                        <Image src="/image/person0.jpg" alt="No-img" margin="0 auto" w={300}></Image>
+                        <Image src="https://images.chosun.com/resizer/PoROCa73WdqXiS4nEDBqYuZTAwY=/616x0/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/LI3RCUHZ7FBIZM25COMXBWB2I4.jpg" alt="No-img" margin="0 auto" w={300}></Image>
                         <Flex marginTop={1} justify="space-between">
                             <Text as="span" fontWeight="bold">조선일보</Text>
                             <Text>2022.02.05</Text>
